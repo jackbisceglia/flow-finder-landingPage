@@ -37,7 +37,7 @@ const LandingScreenSection = () => {
       </p>
       <div className="py-4"></div>
       <p
-        className={`text-lg text-blue-200 opacity-${fadeOpacity} cursor-default transition-all duration-2500 hover:rotate-[2.5deg]`}
+        className={` text-sm text-blue-200 sm:text-base opacity-${fadeOpacity} cursor-default transition-all duration-2500 hover:rotate-[2.5deg]`}
       >
         bridging the gap between <span className="text-blue-500">people</span>{" "}
         and their <span className="py-2 pt-0 text-blue-500 ">basic needs</span>

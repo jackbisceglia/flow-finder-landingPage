@@ -22,7 +22,7 @@ const LandingScreenSection = () => {
   const { fadeOpacity } = useFadeOnPageLoad();
   return (
     <section className="test-bg background-animate flex h-screen w-full flex-col items-center justify-center overflow-y-hidden bg-neutral-900">
-      <p className="absolute top-10 left-10 text-blue-200">
+      <p className="absolute top-4 left-4 text-sm text-blue-200  sm:left-10 sm:top-10 sm:text-base">
         A Product By Pathos
       </p>
       <h1

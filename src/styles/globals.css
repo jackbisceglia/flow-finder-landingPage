@@ -17,3 +17,47 @@ body {
     width: 100%;
     padding: 0;
 }
+
+.test-bg {
+  background-image: linear-gradient(
+    110deg,
+    hsl(240deg 75% 6%) 0%,
+    hsl(241deg 76% 7%) 8%,
+    hsl(241deg 78% 8%) 15%,
+    hsl(240deg 79% 9%) 23%,
+    hsl(240deg 81% 9%) 30%,
+    hsl(239deg 84% 10%) 37%,
+    hsl(237deg 89% 10%) 44%,
+    hsl(226deg 100% 13%) 51%,
+    hsl(225deg 100% 16%) 57%,
+    hsl(225deg 100% 19%) 63%,
+    hsl(225deg 100% 22%) 68%,
+    hsl(226deg 94% 26%) 73%,
+    hsl(229deg 84% 31%) 78%,
+    hsl(231deg 69% 38%) 82%,
+    hsl(232deg 61% 44%) 86%,
+    hsl(233deg 56% 50%) 90%,
+    hsl(233deg 67% 56%) 93%,
+    hsl(232deg 81% 62%) 97%,
+    hsl(232deg 100% 67%) 100%
+  );
+}
+
+
+.background-animate {
+  background-size: 150%;
+
+  -webkit-animation: AnimationName 5s ease infinite;
+  -moz-animation: AnimationName 5s ease infinite;
+  animation: AnimationName 5s ease infinite;
+}
+
+@keyframes AnimationName {
+  0%,
+  100% {
+    background-position: 100% 25%;
+  }
+  50% {
+    background-position: 25% 100%;
+  }
+}

@@ -44,8 +44,11 @@ const LandingScreenSection = () => {
         bridging the gap between <span className="text-blue-500">people</span>{" "}
         and their <span className="py-2 pt-0 text-blue-500 ">basic needs</span>
       </p>
-      <a href="#section2">
-        <CaretDownIcon className="absolute bottom-10 h-12 w-12 cursor-pointer text-blue-200 transition-colors duration-200 ease-in-out hover:text-blue-500" />
+      <a
+        href="#section2"
+        className="fixed bottom-10 flex w-full justify-center text-center"
+      >
+        <CaretDownIcon className="h-12 w-12 cursor-pointer text-center text-blue-200 transition-colors duration-200 ease-in-out hover:text-blue-500" />
       </a>
     </section>
   );

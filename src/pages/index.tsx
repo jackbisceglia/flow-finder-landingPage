@@ -46,7 +46,7 @@ const LandingScreenSection = () => {
       </p>
       <a
         href="#section2"
-        className="fixed bottom-10 flex w-full justify-center text-center"
+        className="absolute bottom-10 flex w-full justify-center text-center"
       >
         <CaretDownIcon className="h-12 w-12 cursor-pointer text-center text-blue-200 transition-colors duration-200 ease-in-out hover:text-blue-500" />
       </a>

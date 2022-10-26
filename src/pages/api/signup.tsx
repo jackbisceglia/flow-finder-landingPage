@@ -15,18 +15,22 @@ const handler: NextApiHandler = async (
       return;
     }
 
-    const resource = await p.signUp.create({
-      data: {
-        email: body.email,
-      },
-    });
+    try {
+      const resource = await p.signUp.create({
+        data: {
+          email: body.email,
+        },
+      });
 
-    if (!resource) {
-      res.send({ error: "Already Signed Up" });
-      return;
-    } else {
-      res.send({ resource });
-      return;
+      if (!resource) {
+        res.send({ error: "Already Signed Up" });
+        return;
+      } else {
+        res.send({ resource });
+        return;
+      }
+    } catch (error) {
+      res.send({ error });
     }
   }
 };

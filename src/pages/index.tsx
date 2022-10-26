@@ -23,11 +23,23 @@ const LandingScreenSection = () => {
       <p className="absolute top-4 left-4 text-sm text-blue-200  sm:left-10 sm:top-10 sm:text-base">
         A Product By Pathos
       </p>
-      <h1
-        className={`py-0 text-6xl font-bold text-blue-600 opacity-${fadeOpacity} transition-opacity duration-1000`}
-      >
-        FlowFinder
-      </h1>
+      <div className="flex w-full items-center justify-center">
+        <div className="relative ml-[-2rem] mr-[1rem] h-12 w-12">
+          <Image
+            className={`border72 select-none transition-all  duration-1000 ease-in opacity-${fadeOpacity}`}
+            src="/favicon.ico"
+            objectFit="fill"
+            priority={true}
+            alt=""
+            layout="fill"
+          />
+        </div>
+        <h1
+          className={`py-0 text-6xl font-bold text-blue-600 opacity-${fadeOpacity} transition-opacity duration-1000`}
+        >
+          FlowFinder
+        </h1>
+      </div>
       <p
         className={`font-base py-0 text-xl text-blue-200 opacity-${fadeOpacity} transition-opacity duration-1000`}
       >
@@ -213,19 +225,23 @@ const JoinTheNewsLetter = () => {
   const [email, setEmail] = useState("");
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const res = await fetch("/api/signup", {
-      method: "POST",
-      body: JSON.stringify({
-        email: email,
-      }),
-    });
-    const data = await res.json();
-    if (data.error) {
+    try {
+      const res = await fetch("/api/signup", {
+        method: "POST",
+        body: JSON.stringify({
+          email: email,
+        }),
+      });
+      const data = await res.json();
+      if (data.error) {
+        setStatusMessage("Couldn't sign up. Try again.");
+      } else {
+        setStatusMessage("Thanks for signing up!");
+      }
+      setEmail("");
+    } catch (error) {
       setStatusMessage("Couldn't sign up. Try again.");
-    } else {
-      setStatusMessage("Thanks for signing up!");
     }
-    setEmail("");
   };
 
   return (

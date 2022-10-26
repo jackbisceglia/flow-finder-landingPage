@@ -11,7 +11,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-textshadow")],
   safelist: [
     "opacity-0",
     "opacity-100",

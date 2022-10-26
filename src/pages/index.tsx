@@ -250,8 +250,8 @@ const JoinTheNewsLetter = () => {
         <h3 className="text-4xl font-black text-blue-100">
           {"Stay in the flow"}
         </h3>
-        <h4 className="py-4 text-2xl font-medium text-blue-700">
-          {"Sign up for early access to FlowFinder"}
+        <h4 className="blue_glow py-4 text-2xl font-bold text-blue-700">
+          {"Sign up for early access to FlowFinder!"}
         </h4>
         <form onSubmit={handleSubmit} className="w-full py-4">
           <input

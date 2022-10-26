@@ -16,7 +16,7 @@ const Pitch = {
   missionStatement:
     "FlowFinder bridges the gap between people and their basic needs.",
   context:
-    "Searching for a restroom in a public, and sometimes unfamiliar, place can be tough and time consuming. The best restrooms are not always publicly visible. Some business owners will require you to make a purchase for restroom access. And sometimes, the restroom is just simply unclean. FlowFinder aims to fix this.",
+    "In 2022 searching for a restroom, on the go, couldn't be more difficult. Between private shops blocking access, and inaccessible public infrastructure, many are left with few options.",
 };
 
 export { Solutions, Pitch };

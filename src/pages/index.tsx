@@ -10,7 +10,7 @@ const useFadeOnPageLoad = () => {
   const [fadeOpacity, setFadeOpacity] = useState(0);
 
   useEffect(() => {
-    setFadeOpacity((_) => 100);
+    setFadeOpacity(() => 100);
   }, []);
 
   return { fadeOpacity };
@@ -52,9 +52,6 @@ const LandingScreenSection = () => {
         bridging the gap between <span className="text-blue-500">people</span>{" "}
         and their <span className="py-2 pt-0 text-blue-500 ">basic needs</span>
       </p>
-      {/* <a href="#section2" className="flex w-full justify-center text-center">
-        <CaretDownIcon className="h-12 w-12 cursor-pointer text-center text-blue-200 transition-colors duration-200 ease-in-out hover:text-blue-500" />
-      </a> */}
     </section>
   );
 };
@@ -71,7 +68,7 @@ const MockupCarousel = () => {
     setImgNumber(direction === "RIGHT" ? incrementRight : incrementLeft);
   };
   return (
-    <div className="relative justify-between ">
+    <div className="relative items-center justify-center pb-6">
       <div className="flex w-full justify-center">
         <button
           onClick={() => handleCarousel("LEFT")}
@@ -86,9 +83,9 @@ const MockupCarousel = () => {
           <ArrowRightIcon className="h-10 w-10 px-2" />
         </button>
       </div>
-      <div className="relative mt-6 h-[28.5rem]">
+      <div className="relative mt-2 h-[27rem]">
         <Image
-          className={`border72 select-none transition-all  duration-1000 ease-in`}
+          className={`select-none transition-all  duration-1000 ease-in`}
           src={`/MOCKUPS/MOCKUP ${imgNumber}.png`}
           objectFit="contain"
           priority={true}
@@ -111,28 +108,14 @@ const TheProductSection = () => {
           <h3 className="py-2 pb-2 text-4xl font-black text-neutral-900">
             The Mission
           </h3>
-          <div className="pb-6 ">
+          <div className="pb-4 ">
             {/* HEADING 1 - Pitch */}
             <h4 className="text-2xl font-semibold text-blue-700">
               {Pitch.title}
             </h4>
             <p className="font-base py-1 text-xl">{Pitch.context}</p>
           </div>
-          {/* HEADING 2 - Solutions */}
-          {/* <div className="pb-6 ">
-            <h4 className="text-2xl font-semibold text-blue-700">
-              How do we solve this?
-            </h4>
-            <ol className="list-decimal px-8 ">
-              <li className="font-base py-1 text-xl">
-                <b>{Solutions.a.title}</b> {Solutions.a.content}
-              </li>
-              <li className="font-base py-1 text-xl">
-                <b>{Solutions.b.title}</b> {Solutions.b.content}
-              </li>
-            </ol>
-          </div> */}
-          <div className="pb-6 ">
+          <div className="pb-4 ">
             <h4 className="text-2xl font-semibold text-blue-700">
               So, why FlowFinder?
             </h4>
@@ -141,25 +124,38 @@ const TheProductSection = () => {
                 <p className=" text-xl font-bold">The Difference</p>
                 <p className="text-lg">
                   {`
-                  FlowFinder stands out because of the details; when using the
-                  app you can clearly identify what kind of restroom you might
-                  be walking into. Does it have a amenities? Is it accessible?
-                  Maybe more importantly, what do others think? Between detailed and user-sourced restroom navigation, and the absolutely essential restroom review system, our app provides a user first experience that you don't want to miss out on. Never again will finding a restroom be a hassle.
+                  FlowFinder works to be user centric. We put all of our focus on our restroom locating system in order to best assist the user.  
                     `}
-                  {/* You also can see what other people think of the bathroom
-                  experience using our comment reviews and rating feature for
-                  each bathroom. This helps especially when dealing with
-                  variables outside of a bathrooms perspective. For example,
-                  someone in the comments can tell you if the bahtroom is
-                  located maybe in a more safe part of the town. */}
                 </p>
               </div>
               <div>
                 <p className=" text-xl font-bold">The Advantage</p>
                 <p className="text-lg">
                   {`
-                  Our advantage is our users. We source our data from the people that really care, whereas the competition produces similar data but in a more algorithmic and technology-focused manner. Our approach actively improves the quality of our app's restroom locater and recommendations, and can only improve over time. This polishes the user experience, so that the more our application is used, the better the quality of the application gets.`}
+                  FlowFinder's advantage is the user sourced data, rather than the algorithmic sourcing methods used by large-scale competitors.
+                  `}
                 </p>
+              </div>
+            </div>
+          </div>
+          <div className="pb-4 ">
+            <h4 className="text-2xl font-semibold text-blue-700">
+              The Features
+            </h4>
+            <div className=" grid grid-cols-1 gap-6 py-2 2xl:grid-cols-2">
+              <div>
+                <p className=" text-xl font-bold">1. Restroom Locating</p>
+                <p className="text-lg">
+                  Our primary focus is to take our users in need, and connect
+                  them with the best restrooms for them, across all criterias.
+                </p>
+              </div>
+              <div>
+                <p className=" text-xl font-bold">2. Reviews and Ratings</p>
+                <p className="text-lg">{`
+                  FlowFinder wants users to know what they're getting into.
+                  Our review system aims to solve this, and provide a great experience for all.
+                `}</p>
               </div>
             </div>
           </div>

@@ -274,7 +274,7 @@ const GoogleFormSection = () => {
     <section className="flex w-full items-center justify-center px-8 pt-12 pb-10 md:w-5/6 md:px-28 lg:px-44">
       <iframe
         className="h-[40rem] w-full"
-        src="https://docs.google.com/forms/d/e/1FAIpQLSewDy-d4YrTqn4tRFlKZot8Iia0aLeO91cwyzLEDDiVmkpBSQ/viewform"
+        src="https://forms.gle/GjgPHkhPTuGU7R2D9"
       ></iframe>
     </section>
   );
